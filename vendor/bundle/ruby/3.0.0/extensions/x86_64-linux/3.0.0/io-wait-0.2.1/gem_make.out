@@ -1,0 +1,23 @@
+current directory: /home/daniel/code/monoestereo/vendor/bundle/ruby/3.0.0/gems/io-wait-0.2.1/ext/io/wait
+/usr/bin/ruby -I /usr/share/rubygems -r ./siteconf20220330-35571-44kj0q.rb extconf.rb
+checking for rb_io_wait()... yes
+checking for sys/ioctl.h... yes
+checking for FIONREAD in sys/ioctl.h,sys/ioctl.h... yes
+creating Makefile
+
+current directory: /home/daniel/code/monoestereo/vendor/bundle/ruby/3.0.0/gems/io-wait-0.2.1/ext/io/wait
+make DESTDIR\= clean
+rm -f 
+rm -f wait.so  *.o  *.bak mkmf.log .*.time
+
+current directory: /home/daniel/code/monoestereo/vendor/bundle/ruby/3.0.0/gems/io-wait-0.2.1/ext/io/wait
+make DESTDIR\=
+gcc -I. -I/usr/include -I/usr/include/ruby/backward -I/usr/include -I. -DHAVE_RB_IO_WAIT -DHAVE_SYS_IOCTL_H -DFIONREAD_HEADER="<sys/ioctl.h>"    -fPIC -O2  -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1 -fstack-protector-strong -specs=/usr/lib/rpm/redhat/redhat-annobin-cc1  -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -fPIC -m64 -o wait.o -c wait.c
+rm -f wait.so
+gcc -shared -o wait.so wait.o -L. -L/usr/lib64 -L. -Wl,-z,relro -Wl,--as-needed  -Wl,-z,now -specs=/usr/lib/rpm/redhat/redhat-hardened-ld -fstack-protector-strong -rdynamic -Wl,-export-dynamic -Wl,-z,relro -Wl,--as-needed  -Wl,-z,now -specs=/usr/lib/rpm/redhat/redhat-hardened-ld   -m64  -lruby  -lm   -lc
+
+current directory: /home/daniel/code/monoestereo/vendor/bundle/ruby/3.0.0/gems/io-wait-0.2.1/ext/io/wait
+make DESTDIR\= install
+/usr/bin/mkdir -p . ./.gem.20220330-35571-8xqeuy/io
+exit > .sitearchdir.-.io.time
+/usr/bin/install -c -m 0755 wait.so ./.gem.20220330-35571-8xqeuy/io
